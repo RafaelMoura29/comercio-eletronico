@@ -1,0 +1,1 @@
+web: gunicorn i3gs_base.wsgi
