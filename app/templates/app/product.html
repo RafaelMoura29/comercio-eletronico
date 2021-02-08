@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block name_page %} {% endblock %}
+
+{% block content %}
+
+<div class="row">
+  
+  <div class="col-md-5 product-container">
+    <img class="product-page-image" src="{{ data.img_url }}" alt="">
+  </div>
+  
+  <div class="col-md-7 pl-4 pr-5 pb-5 pt-3">
+    <h2>{{data.name}}</h2>
+    <p>{{data.description}}</p>
+    <p>R$ {{data.price}}</p>
+
+    <div class="row align-bottom">
+
+      <div class="col-md-6">
+        <a href="#" class="btn btn-primary w-100">Comprar</a>
+      </div>
+
+      <div class="col-md-6">
+        <a href="#" class="btn btn-primary w-100">Adicionar ao carrinho</a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

@@ -1,1 +1,33 @@
 /* Add css here */
+.product-image:hover {
+  cursor: pointer;
+}
+
+.product-title:hover {
+  text-decoration: none; /* no underline */
+  cursor: pointer;
+}
+
+.product-title {
+  color: #222;
+  text-decoration: none; /* no underline */
+}
+
+.product-page-image {
+  min-height: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.product-container{
+  height: 400px;
+}
+
+.sidebar-mini.sidebar-collapse .main-header{
+  margin-left: 0 !important;
+}
+footer{
+  position: fixed;
+  bottom: 0;
+}

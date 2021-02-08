@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block name_page %} {% endblock %}
+
+{% block content %}
+
+{{ user.is_superuser }}
+
+<div class="col-md-6">
+        <a href="/purchase" class="btn btn-primary w-100">Finalizar compra</a>
+</div>
+
+{% endblock %}
