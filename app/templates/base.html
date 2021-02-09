@@ -34,7 +34,12 @@
       {% if user.is_superuser %}
    
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="/" class="nav-link">Cadastrar produto</a>
+        <a href="/cadastroProduto" class="nav-link">Cadastrar livro</a>
+      </li>
+      {% endif %}
+      {% if not user.is_authenticated %}
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="/accounts/login" class="nav-link">Login</a>
       </li>
       {% endif %}
     </ul>
@@ -53,7 +58,7 @@
           <i class="fas fa-sign-out-alt"></i>
         </a>
       </li>
-    {% endif %}
+      {% endif %}
     </ul>
   </nav>
   <!-- /.navbar -->

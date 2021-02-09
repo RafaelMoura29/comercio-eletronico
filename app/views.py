@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import csrf_exempt
 from app.models import Product
-# Create your views here.
+from app.models import Cart
+from django.http import JsonResponse
+from django.utils import timezone
 
 def indexPage(request):
     return render(request, 'app/index.html', {'data': Product.objects.all()})
@@ -14,7 +17,7 @@ def purchasePage(request):
 
 @login_required
 def cartPage(request):
-    return render(request, 'app/cart.html', {})
+    return render(request, 'app/cart.html', {'data': "none"})
 
 @login_required
 def cadastroProduto(request):
@@ -29,3 +32,10 @@ def registerProduct(request):
 def clientInformationsPage(request):
     return render(request, 'app/clientInformations.html', {})
 
+@csrf_exempt
+@login_required
+def addToCart(request, productPk):
+    #product = Product.objects.get(pk=productPk)
+    #c = Cart(user_fk=request.user, date=timezone.now())
+    #print(c.save())
+    return JsonResponse(dados, safe=False)

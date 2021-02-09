@@ -9,4 +9,5 @@ urlpatterns = [
     path('clientInformations', views.clientInformationsPage, name='clientInformations'),
     path('cadastroProduto', views.cadastroProduto, name='cadastroProduto'),
     path('registerProduct', views.registerProduct, name='registerProduct'),
+    path('addToCart/<int:productPk>', views.addToCart, name='addToCart'),
 ]
